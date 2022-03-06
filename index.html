@@ -1,25 +1,42 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<?php
+session_start();
+include 'dbconnect.php';
 
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    
-    <link rel="stylesheet" type="text/css" href="style.css">
+?>
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bank Limbah Online Keluarga Bahagia</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Falenda Flora, Ruben Agung Santoso" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+  
+<!-- js -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<link href='//fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
 
-    <title>Welcome to, Aestheweb!</title>
-
-
-  <link rel="icon" href="img/yea.png" type="image" sizes="16x16">
-  <!-- Anti Scrollbar Horizontal -->
-    <style>
+<!-- start-smoth-scrolling -->
+<style>
       /* script menghilangkan Horizontal Scroll */
       html, body {
       max-width: 100%;
@@ -30,234 +47,257 @@
       width: 150%;
       }
     </style>
-  </head>
-  <body>
-    
-    <!--navbar start-->
-    <nav class="navbar fixed-top navbar-expand-md navbar-light shadow p-3 mb-5 bg-body rounded tab-pane fade show active w3-opacity w3-hover-opacity-off" style="color: #73c5ff">
-  <div class="container">
-    <a class="navbar-brand" style="color: #73c5ff" href="#"><span style="color: #fc6203">Aesthe</span>web.id</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon light"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul style="color: #73c5ff" class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#" style="color: #fc6203">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about" style="color: #fc6203">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#services" style="color: #fc6203">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#sample" style="color: #fc6203">Sample Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact" style="color: #fc6203">Contact</a>
-        </li>
-      </ul>
+    <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .agileits_header {
+    width: 100%;
+    z-index:100;
+    position: fixed;
+  }
+  </style>
+</head>
+	
+<body>
+<!-- header -->
+	
+    <div class="agileits_header bg-light shadow" style="background-color: #33e863">
+		<div class="container" >
+            <form action="search.php" method="post">
+				<input class="form-control me-2" style="width: " type="search" name="Search" placeholder="Cari Jenis...">
+				<div class="clearfix"></div>
+			</form>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+<!-- navigation -->
+	
+		
+<!-- //navigation -->
+	<div class="logo_products" style="padding-top 90px">
+		<div class="container">
+		<div class="w3ls_logo_products_left1">
+				
+<div class="bottomnav bg-light shadow border">
+		<div class="container" >
+            
+			<div class="agile-login">
+            <div class="homep" style=" margin-right:50%">  
+					<a href="index.php"><button class="w3view-cart" type="submit" name="submit" value=""><i class="fa-solid fa-house"  style="color: grey"></i></button>
+					 </a>
+			</div>
+            
+				<ul>
+				<?php
+				if(!isset($_SESSION['log'])){
+					echo '
+					<li></li>
+					<li><a href="login.php" style="color: grey; margin-left: 140%">Masuk</a></li>
+					';
+				} else {
+					
+					if($_SESSION['role']=='Member'){
+					echo '
+					<li><a href="logout.php" style="color: grey; margin-left: 140%">Keluar?</a></li>
+					';
+					} else {
+					echo '
+					<li style="color: grey">Halo, '.$_SESSION["name"].'
+					<li><a href="admin" style="color: grey; margin-right: 70%">Admin Panel</a></li>
+					<li><a href="logout.php" style="color: grey; margin-left: 140%">Keluar?</a></li>
+					';
+					};
+					
+				}
+				?>
+					
+				</ul>
+			</div>
+            
+			<div class="product_list_header" style="margin-right: 5%; margin-bottom: 3%">  
+					<a href="cart.php"><button class="w3view-cart" style="margin-right: 90%;" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true" style="color: grey; margin-right: 90%;"></i></button>
+					 </a>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+    <style>
+.bottomnav{
+width:107%;
+position:fixed;
+bottom:0px;
+right:0px;
+z-index:100;
+}
+</style>
+			</div>
+		
+	</div>
+<!-- //header -->
+
+	<!-- main-slider -->
+	<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+  </ul>
+ 
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner mt-5">
+    <div class="carousel-item active">
+      <img src="images/bso.jpg" alt="Los Angeles" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="images/rrr.png" alt="Chicago" width="1100" height="500">
     </div>
   </div>
-</nav>
-    <!--navbar end-->
-
-    <!--jumbotron start-->
-<section class="jumbotron">
-  <div class="container">
-  <div class="row">
-    <div class="text col">
-      <p data-aos="fade-down-right" data-aos-duration="20000" id="head" class="text-wrap text-lg-start fs-5 mt-5" style="color: #73c5ff" style="margin-top: 400px">We will build you a stunning website & <span style="color: #fc6203">makes us feel satisfied</span></p>
-    </div>
-    <div data-aos="fade-down-left" data-aos-duration="20000" class="bg1 col">
-    </div>
-      </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
 </div>
-</section>
-    <!--jumbotron end-->
+	<!-- //main-slider -->
+	<!-- //top-header and slider -->
+    <div class="row row-cols-5 row-cols-Lg-1 mt-5 ml-3" style=" width: 70%;">
+							
+								
+														<div class="mt-1" style="margin-left: 10%">
+															<a href="kategori.php? ?>"><img class="card-img-top ml-2 mt-4" title="Bersih" alt=" " src="images/blo1.png"/></a>                                                                               <p class="" style="color: green;">Kebersihan</p>
+                                                            </div>
+                                                            <div class="mt-3" style="margin-left: 19%">
+															<a href="kategori.php? ?>"><img class="card-img-top ml-3 mt-4" title=" " alt=" " src="images/blo2.jpeg"/></a>                                                                                   <p class="" style="color: green">Kenyamanan</p>
+                                                            </div>
+															
+                                                            <div class="ml-3" style="margin-left: 10%">
+															<a href="kategori.php? ?>"><img class="card-img-top ml-5 mt-3" title=" " alt=" " src="images/blo4.jpg"/></a>                                                                                    <p class="ml-5" style="color: green">Keindahan</p>
+                                                            </div>
+                                                            
+                                                            
+																
+																
+														</div>
 
-    <!--About start-->
-<section id="about">
-  <div class="container-fluid" style="background-color: #ff5500">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,0L480,96L960,192L1440,0L1440,0L960,0L480,0L0,0Z"></path></svg>
-    <h3 class="text-center mb-5" style="color: #f3f4f5"><strong>About</strong></h3>
-  <div class="row">
-    <div class="col">
-      <p data-aos="fade-right" data-aos-duration="10000" class=" fs-5 mt-5 mb-5" style="color: #f3f4f5">"We will build a stunning website & make us feel satisfied. . ."</p>
-    </div>
-    <div class="col">
-      <p data-aos="fade-left" data-aos-duration="10000" class=" fs-5 mt-5 mb-5" style="color: #f3f4f5">"Stunning and beautiful website can makes us feel the good experiences"</p>
-    </div>
-  </div>
-</div>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff5500" fill-opacity="1" d="M0,256L480,96L960,192L1440,224L1440,0L960,0L480,0L0,0Z"></path></svg>
-</section>
-    <!--About end-->
-
-    <!--Services Start-->
-<section id="services">
-  <div class="container-fluid mt-5 mb-5 pt-3">
-  <h3 class="text-center mb-5 pt-5" style="color: #ff5500"><strong>Services</strong></h3>
-  <div class="row row-cols-1 row-cols-md-3 g-4 pt-5">
-  <div class="col mb-5 pt-5">
-    <div class="bg-light shadow rounded" data-aos="fade-up" data-aos-duration="20000">
-      <img src="services1.svg" class="card-img-top" alt="..." style="height: 200px">
-      <div class="">
-        <h5 class="card-title text-center font-weight-bolder" style="color: #ff5500;" style="margin-top: 30px;">Company Profile Websites</h5>
-      </div>
-    </div>
-  </div>
-  <div class="col mb-5 pt-5">
-    <div class="bg-light shadow rounded" data-aos="fade-down" data-aos-duration="20000">
-      <img src="services2.svg" class="card-img-top" alt="..." style="height: 200px">
-      <div class="">
-        <h5 class="card-title text-center font-weight-bolder" style="color: #ff5500;">Personal Websites</h5>
-      </div>
-    </div>
-  </div>
-  <div class="col mb-5 pt-5">
-    <div class="bg-light shadow rounded" data-aos="fade-up" data-aos-duration="10000">
-      <img src="services3.svg" class="card-img-top" alt="..." style="height: 200px">
-      <div class="">
-        <h5 class="card-title text-center font-weight-bolder" style="color: #ff5500;">Other Website Needs</h5>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-    <!--Services End-->
+                    <div class="row row-cols-5 row-cols-Lg-1 mt-5 ml-3" style=" width: 70%;">
 
 
-    
-<div class="container-fluid mt-5 pb-5" style="background-color: #ff5500">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,0L480,96L960,192L1440,0L1440,0L960,0L480,0L0,0Z"></path></svg>
-<!-- Our Projects Section -->
-<section id="sample">
-  <div class="container-fluid mt-5 mb-5 pt-3">
-  <h3 class="text-center mb-5 pt-5" style="color: #ffffff"><strong>Sample Projects</strong></h3>
-  <div class="justify-content-center row row-cols-1 row-cols-md-3 g-4 pt-5">
-  <div class="justify-content-center col mb-5">
-    <div class="shadow p-3 mb-5 bg-white rounded" data-aos="fade-up" data-aos-duration="20000">
-      <img src="img/Docommerce.png" class="card-img-top" alt="..." style="height: 200px">
-      <div class="">
-        <h5 class="text-center" style="color: #fc6203;" style="margin-top: 30px;"><strong>Docommerce</strong></h5>
-      </div>
-      <div class="">
-        <p class="text-center" style="color: grey;">This is an ecommerce website that integrated with payment gateway for users payment services theres a lot of payment method that could make a good a payment service for users</p>
-      </div>
-    </div>
-  </div>
-  <div class="justify-content-center col mb-5">
-    <div class="shadow p-3 mb-5 bg-white rounded" data-aos="fade-down" data-aos-duration="20000">
-      <img src="img/belionline.10.png" class="card-img-top" alt="..." style="height: 200px">
-      <div class="">
-        <h5 class="text-center" style="color: #fc6203;"><strong>Belionline</strong></h5>
-      </div>
-      <div class="">
-        <p class="text-center" style="color: grey;">This is an ecommerce website that integrated with restful api for shipping services & also some payment gateway for users payment services and shipping services theres a lot of payment method and shipping services that could make a good a services for users</p>
-      </div>
-    </div>
-  </div>
-</section>
-</div>
-<!-- End of Our Projects Section  -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff5500" fill-opacity="1" d="M0,192L48,186.7C96,181,192,171,288,149.3C384,128,480,96,576,101.3C672,107,768,149,864,186.7C960,224,1056,256,1152,245.3C1248,235,1344,181,1392,154.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+                                                        <div class="mt-4" style="margin-left: 10%">
+															<a href="kategori.php? ?>"><img class="card-img-top ml-2 mt-4" title="Bersih" alt=" " src="images/blo2.jpeg"/></a>                                                                               <p class="" style="color: green;">Kategori</p>
+                                                            </div>
+                                                            <div class="mt-4" style="margin-left: 19%">
+															<a href="kategori.php?idkategori=10 ?>"><img class="card-img-top ml-3 mt-1" title=" " alt=" " src="images/blo4.jpg"/></a>                                                                                   <p class="ml-3" style="color: green">Limbah</p>
+                                                            </div>
+															
+                                                            <div class="ml-3 mt-4" style="margin-left: 10%">
+															<a href="order.php? ?>"><img class="card-img-top ml-5 mt-3" title=" " alt=" " src="images/blo1.png"/></a>                                                                                    <p class="ml-5" style="color: green">Tabungan</p>
+                                                            </div>
+														</div>
 
-    
-    <!--Contact Start-->
-<section id="contact">
-<div class="row justify-content-center pt-5">
-  <div data-aos="fade-down-right" data-aos-duration="20000" class="w3-col m5 pt-5" style="color: #ff5500">
-    <div class="w3-padding-16 pt-5"><span class="text-center w3-xlarge "><strong>Contact Us</strong></div>
-      <h3>Address</h3>
-      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>&nbsp;&nbsp;Bekasi, Indonesia</p>
-      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>&nbsp;&nbsp;+6281286893584</p>
-      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>&nbsp;&nbsp;defriawanfajar15@gmail.com</p>
-    </div>
-<div data-aos="fade-down-left" data-aos-duration="20000" class="col-md-5">
-<div class="">
-  <!-- <img src="img/send.png" class="" alt="..." style="size: 10px;"> -->
-</div>
-<div class="row justify-content-end mt-3 pt-5">
-  <h1 class="text-center" style="color: #ff5500;">If You Want to Build Some Great Websites</h1>
-<a href="https://wa.me/6281286893584" class="justify-content-end btn btn-light shadow rounded-pill mt-3" style="color: #ff5500;">Send a Message to Us</a>
-</div>   
-</div>
-</div>
-</div>
-</section>
-<!--Contact End-->
-
-
-    <!--Footer Start-->
-
-<footer class="" style="background-color: #ff5500">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L48,234.7C96,245,192,267,288,234.7C384,203,480,117,576,96C672,75,768,117,864,149.3C960,181,1056,203,1152,197.3C1248,192,1344,160,1392,144L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-md-4 col-lg-3">
-        
-            <!-- Brand -->
-            <img src="./assets/img/brand.svg" alt="" class="footer-brand img-fluid mb-2">
-
-            <!-- Text -->
-            <p class="text-gray-700 mb-2 text-center" style="color: #ffffff">
-              Let's Build Your Aesthetic Website
-            </p>
-
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-        
-        
-            <!-- Heading -->
-            <h6 class="font-weight-bold text-uppercase text-gray-700 justify-content-end" style="color: #ffffff">
-              Services
-            </h6>
-
-            <!-- List -->
-            <ul class="list-unstyled text-muted">
-              <li class="mb-3">
-                <a href="#services" class="text-white">
-                  Company Profile Websites
-                </a>
-              </li>
-              <li class="mb-3">
-                <a href="#services" class="text-white">
-                  Personal Websites
-                </a>
-              </li>
-              <li class="mb-3">
-                <a href="#services" class="text-white">
-                  Other Websites Needs
-                </a>
-              </li>
-<div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-theme-dark w3-padding">Go To Top</span>    
-    <a class="w3-text-gray" href="#myHeader"><span class="w3-xlarge">
-    <i class="fa fa-chevron-circle-up"></i></span></a>
-  </div>
+                                                        </div>
+										
+				<div class="clearfix"> </div>
+			</div>
+			
+			
+			
+		</div>
+	</div>
+	<!-- top-brands -->
+	<div class="top-brands-card">
+			<div class="agileinfo_single">
+				<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+					<div id="myTabContent" class="tab-content">
+						<div role="tabpanel" class="tab-pane fade in active" id="expeditions" aria-labelledby="expeditions-tab">
+							<div class="agile-tp">
+								<h5>
+								<?php
+								if(!isset($_SESSION['name'])){
+									
+								} else {
+									echo 'Untukmu, '.$_SESSION['name'].'!';
+								}
+								?>
+								</h5>
+								</div>
+							<div class="row row-cols-2 row-cols-Lg-1" style="width: 100%; padding-left: 0px;">
+							
+								
+														<div class="card shadow mb-1">
+															<a href="wa.me/Saya%20Menabung%20Limbah%20Kardus%20%20%20Alamat:"><img class="card-img-top" title=" " alt=" " src=""/></a>		
+															<p><?php echo $p['namaproduk'] ?></p>
+															<div class="stars">
+															<?php
+															$bintang = '<i class="fa fa-star blue-star" aria-hidden="true"></i>';
+															$rate = $p['rate'];
+															
+															for($n=1;$n<=$rate;$n++){
+																echo '<i class="fa fa-star blue-star" aria-hidden="true"></i>';
+															};
+															?>
+															</div>
+															<h4>Rp 3000 </h4>
+                                                            <div class="snipcart-details top_brand_home_details">
+																
+																	<a href="wa.me/Saya%20Menabung%20Limbah%20Kardus%20%20%20Alamat:"><input type="submit" class="btn btn-warning" value="Tabung" style="background-color: #00de3b" /></a>
+																
+														</div>
+														</div>
+														
+								<?php			}
+								?>
+				<div class="clearfix"> </div>
+			</div>
+			
+			
+			
+		</div>
+	</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						
+											
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- //top-brands -->
 
 
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </footer>
-    <!--Footer End-->
 
-    <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
-    -->
-    <script>
-  AOS.init();
-</script>
-  </body>
+<!-- //footer -->
+<!-- //footer -->	
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- top-header and slider -->
+<!-- here stars scrolling icon -->
+<!-- //here ends scrolling icon -->
+
+<!-- main slider-banner -->
+<script src="js/skdslider.min.js"></script>
+<link href="css/skdslider.css" rel="stylesheet">
+<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery('#demo1').skdslider({'delay':5000, 'animationSpeed': 2000,'showNextPrev':true,'showPlayButton':true,'autoSlide':true,'animationType':'fading'});
+						
+			jQuery('#responsive').change(function(){
+			  $('#responsive_wrapper').width(jQuery(this).val());
+			});
+			
+		});
+</script>	
+<!-- //main slider-banner --> 
+</body>
 </html>
